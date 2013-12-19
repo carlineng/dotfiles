@@ -16,7 +16,7 @@
 ## -----------------------------------------------------------------------------------------
 ## -- 1) Set variables and keybindings for emacs compatibility (remapping Ctrl-A to Ctrl-T)
 ## -----------------------------------------------------------------------------------------
-markkeys "h=^B:l=^F:$=^E"             # emacs style keybindings during copy mode movement in screen
+# markkeys "h=^B:l=^F:$=^E"             # emacs style keybindings during copy mode movement in screen
 autodetach             on             # default: on
 crlf                  off             # default: off
 #deflogin              off            # default: on
@@ -27,48 +27,49 @@ escape	"^Tt"                         # ctrl-A default interferes with emacs keyb
 defutf8 on                            # unicode by default
 defscrollback         10000           # default: 100
 silencewait           15              # default: 30
+msgwait               0
 activity              "activity in %n (%t) [%w:%s]~"
 bell                  "bell     in %n (%t) [%w:%s]~"
 
 # Change keybindings for convenience
-bind ^Q mapdefault
-bind q mapdefault 
-bind k
-bind ^k
-bind .
-bind ^\
-bind \\
-bind ^h
-bind h
-bind ''
-bind 'L'
-#bind 'I' login on
-#bind 'O' login off
-bind '}' history
-bind ^a
+# bind ^Q mapdefault
+# bind q mapdefault 
+# bind k
+# bind ^k
+# bind .
+# bind ^\
+# bind \\
+# bind ^h
+# bind h
+# bind ''
+# bind 'L'
+# bind 'I' login on
+# bind 'O' login off
+# bind '}' history
+# bind ^a
 
 # aterm bindings                                                          
-bindkey "Oc" next
-bindkey "Od" prev
+# bindkey "Oc" next
+# bindkey "Od" prev
 
 # Emacs compatibility
 # Easy switching of windows without p/n confusion, as ctrl-p and ctrl-n
 # are frequently used in emacs but u/j are not...
-bind 'u' prev
-bind ^U prev
-bind 'j' next
-bind ^J next
+# bind 'u' prev
+# bind ^U prev
+# bind 'j' next
+# bind ^J next
 
 # Emacs compatibility for screen movement (if you use subscreen regions)
 # Using tab to move around regions gets annoying.  These help.
-bind ^P focus up
-bind 'p' focus up
-bind ^N focus down
-bind 'n' focus down
-bind ^F focus top
-bind 'f' focus top
-bind ^B focus bottom
-bind 'b' focus bottom
+# bind ^P focus up
+# bind 'p' focus up
+# bind ^N focus down
+# bind 'n' focus down
+# bind ^F focus top
+# bind 'f' focus top
+# bind ^B focus bottom
+# bind 'b' focus bottom
 
 ## -------------------------------------------------------------------------------------------------
 ## -- 2) Hardstatus line (aka navigation bar at bottom) 
@@ -85,8 +86,8 @@ sorendition "+b kG"
 hardstatus alwayslastline "%H %-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"  
 
 # 2.3) Autoload two screen tabs for emacs/bash.
-screen -t emacs 0
-screen -t bash 1
+# screen -t emacs 0
+# screen -t bash 1
 
 # 2.4) Description of the keywords used in hardstatus
 # caption always "%?%F%{-b bc}%:%{-b bb}%?%C|%D|%M %d|%H%?%F%{+u wb}%? %L=%-Lw%45>%{+b by}%n%f* %t%{-}%+Lw%-0<"
